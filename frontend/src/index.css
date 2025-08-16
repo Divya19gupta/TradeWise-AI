@@ -14,5 +14,12 @@ code {
 .nav-link:hover {
   color: #0d6efd;
 }
-
-
+.accordion-button::after {
+  background-image: none !important;
+  content: "+";             
+  font-weight: bold;
+  transform: none;
+}
+.accordion-button:not(.collapsed) {
+  background-color: white; /* optional: change background */
+}

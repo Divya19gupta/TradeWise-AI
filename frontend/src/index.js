@@ -22,7 +22,7 @@ root.render(
       <Route path="/about" element={<AboutPage />} />
       <Route path="/products" element={<ProductsPage />} />
       <Route path="/pricing" element={<PricingPage />} />
-      <Route path="/about" element={<SupportPage />} />
+      <Route path="/support" element={<SupportPage />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
     <Footer />

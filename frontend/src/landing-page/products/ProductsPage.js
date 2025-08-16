@@ -46,7 +46,7 @@ function ProductsPage() {
         googlePlay=""
         appStore=""
       />
-      <p className="fs-5 mt-3 text-center">Want to know more about our technology stack? Check out the <a href="#" className="text-decoration-none" style={{color:"#0d6efd"}}>Zerodha.tech</a> blog.</p>
+      <p className="fs-5 mt-3 text-center">Want to know more about our technology stack? Check out the <a href="#" className="text-decoration-none text-primary">Zerodha.tech</a> blog.</p>
       <Universe />
     </>
   );

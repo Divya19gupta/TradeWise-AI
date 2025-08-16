@@ -4,7 +4,7 @@ function Stats() {
     return ( 
         <div className='container mt-5 p-5'>
             <div className='row'>
-                <div class ='col-md-6'>
+                <div className ='col-md-6'>
                     <div>
                         <h2 className='mb-5'>Trust with confidence</h2>
                         <div>
@@ -25,7 +25,7 @@ function Stats() {
                         </div>
                     </div>
                 </div> 
-                <div class ='col-md-6'>
+                <div className ='col-md-6'>
                     <img src= "media/images/ecosystem.png" alt="Stats" className='img-fluid' />
                     <div className='text-center mt-3'>
                         <a href='' className='text-decoration-none'>Explore our products 

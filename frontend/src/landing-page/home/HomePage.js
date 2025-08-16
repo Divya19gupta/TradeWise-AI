@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../support/Navbar';
+import Navbar from '../Navbar';
 import Hero from './Hero';
 import Awards from './Awards';
 import Stats from './Stats';
@@ -11,14 +11,12 @@ import Footer from '../Footer';
 function HomePage() {
     return ( 
         <>
-        <Navbar />
         <Hero />
         <Awards />
         <Stats />
         <Pricing />
         <Education />
         <OpenAccount />
-        <Footer />
         </>
      );
 }

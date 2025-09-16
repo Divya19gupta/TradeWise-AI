@@ -736,16 +736,16 @@ hr {
 .buy {
   background-color: #4184f3;
   color: #fff;
-  font-weight: 400;
-  font-size: 0.8rem;
+  /* font-weight: 400; */
+  /* font-size: 0.8rem; */
   border: 0.7px solid #4184f3;
 }
 
 .sell {
   background-color: #ff5722;
   color: #fff;
-  font-weight: 400;
-  font-size: 0.8rem;
+  /* font-weight: 400; */
+  /* font-size: 0.8rem; */
   border: 0.7px solid #ff5722;
 }
 

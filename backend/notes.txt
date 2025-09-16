@@ -1,0 +1,26 @@
+🚀 How They Work Together
+Node.js: Runs your backend code.
+Express.js: Makes it easy to handle routes, APIs, and middleware.
+MongoDB: Stores your app’s data.
+
+👉 Example flow:
+A user submits a form on your website (/register).
+Express.js receives the request and parses the data. (npm init)
+Node.js handles the server logic and talks to the database.
+MongoDB saves the new user record.
+Response is sent back via Express.js to the user.
+
+MongoDB -> Node.js -> Express.js
+
+-- Like in Reactjs it is loaded after every change, nodemon is a library which helps in constant reloading on the backend side
+-- backend % npm i -D nodemon (-D means the Dev Dependencies)
+
+👉 In short:
+body-parser → Understand request data (helps server understand formdata/JSON)
+cors → Allow frontend + backend to talk
+dotenv → Store secrets safely
+express → Build server routes on node.js
+mongoose → Talk to MongoDB. Instead of writing raw database commands, you write: User.create({ username: "bob" });
+passport → Helps handle authentication (logging in users).
+passport-local → A strategy (plugin) for Passport to use username + password login (the "local" part means: stored in your own database, not Google/Facebook/etc).
+passport-local-mongoose → Make login + MongoDB integration easy

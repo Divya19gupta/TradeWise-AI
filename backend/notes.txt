@@ -24,3 +24,4 @@ mongoose → Talk to MongoDB. Instead of writing raw database commands, you writ
 passport → Helps handle authentication (logging in users).
 passport-local → A strategy (plugin) for Passport to use username + password login (the "local" part means: stored in your own database, not Google/Facebook/etc).
 passport-local-mongoose → Make login + MongoDB integration easy
+

@@ -6,9 +6,15 @@ const mongoose = require('mongoose'); // Import Mongoose for MongoDB interaction
 const PORT = process.env.PORT || 3003; // Define the port to run the server on
 const uri = process.env.MONGO_URL; // MongoDB connection string from environment variables
 
+const bodyParser = require('body-parser'); // Middleware to parse incoming request bodies
+const cors = require('cors'); // Middleware to enable CORS (Cross-Origin Resource Sharing)
+
 const {HoldingsModel} = require('./model/HoldingsModel'); // Import the Holdings model
 const {PositionsModel} = require('./model/PositionsModel'); // Import the Positions model
 const app = express(); // Create an Express application
+app.use(cors()); // Use CORS middleware to allow cross-origin requests
+app.use(bodyParser.json()); // Use body-parser middleware to parse JSON request bodies
+
 
 // app.get('/addPositions', async (req, res) => {
 //     let tempPositions = [
@@ -182,6 +188,15 @@ const app = express(); // Create an Express application
 //     res.send('Holdings added successfully');
 // }); 
 
+app.get('/allHoldings', async (req, res) => {
+    let allHoldings = await HoldingsModel.find({});
+    res.json(allHoldings);
+});
+
+app.get('/allPositions', async (req, res) => {
+    let allPositions = await PositionsModel.find({});
+    res.json(allPositions);
+});
 
 app.listen(PORT, () => {
   console.log('Server is running on http://localhost:3003');

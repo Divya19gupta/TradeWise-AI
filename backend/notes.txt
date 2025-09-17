@@ -25,3 +25,8 @@ passport → Helps handle authentication (logging in users).
 passport-local → A strategy (plugin) for Passport to use username + password login (the "local" part means: stored in your own database, not Google/Facebook/etc).
 passport-local-mongoose → Make login + MongoDB integration easy
 
+Here: They often work together: state triggers changes, effect reacts to them.
+-- useState stores the data (users).
+-- useEffect runs once (because of []) to fetch users from an API.
+useState = manages values inside React.
+useEffect = handles tasks outside React (side effects).

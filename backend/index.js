@@ -11,6 +11,8 @@ const cors = require('cors'); // Middleware to enable CORS (Cross-Origin Resourc
 
 const {HoldingsModel} = require('./model/HoldingsModel'); // Import the Holdings model
 const {PositionsModel} = require('./model/PositionsModel'); // Import the Positions model
+const {OrdersModel} = require('./model/OrdersModel'); // Import the Orders model
+
 const app = express(); // Create an Express application
 app.use(cors()); // Use CORS middleware to allow cross-origin requests
 app.use(bodyParser.json()); // Use body-parser middleware to parse JSON request bodies
@@ -196,6 +198,22 @@ app.get('/allHoldings', async (req, res) => {
 app.get('/allPositions', async (req, res) => {
     let allPositions = await PositionsModel.find({});
     res.json(allPositions);
+});
+
+app.post('/addOrder', async (req, res) => {
+  let newOrder = new OrdersModel({
+    name: req.body.name,
+    qty: req.body.qty,
+    price: req.body.price,
+    mode: req.body.mode,
+  });
+  newOrder.save();
+  res.send({message: 'Order added successfully'});
+});
+
+app.get('/allOrders', async (req, res) => {
+    let allOrders = await OrdersModel.find({});
+    res.json(allOrders);
 });
 
 app.listen(PORT, () => {

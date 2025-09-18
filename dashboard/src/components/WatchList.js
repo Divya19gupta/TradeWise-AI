@@ -4,7 +4,27 @@ import { watchlist } from '../data/data';
 import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
 import { BarChartOutlined, MoreHoriz } from '@mui/icons-material';
 import GeneralContext from "./GeneralContext";
+import { DoughnutChart } from './DoughnutChart';
 function WatchList() {
+  const labels = watchlist.map(item => item["name"]);
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: 'Watchlist Prices',
+        data: watchlist.map(item => item.price),
+        backgroundColor: [
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)',
+          'rgb(255, 205, 86)',
+          'rgb(75, 192, 192)',
+          'rgb(153, 102, 255)',
+          'rgb(255, 159, 64)'
+        ],
+        hoverOffset: 4
+      }
+    ]
+  };  
      return (
     <div className="watchlist-container">
       <div className="search-container">
@@ -25,7 +45,7 @@ function WatchList() {
             )
         })}
       </ul>
-
+        <DoughnutChart data={data}/>
     </div>
   );
 }

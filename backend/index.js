@@ -17,6 +17,7 @@ const app = express(); // Create an Express application
 app.use(cors()); // Use CORS middleware to allow cross-origin requests
 app.use(bodyParser.json()); // Use body-parser middleware to parse JSON request bodies
 
+const { getStockNewsSummary } = require("./model/GenerateNewArticlesModel");
 
 // app.get('/addPositions', async (req, res) => {
 //     let tempPositions = [
@@ -214,6 +215,18 @@ app.post('/addOrder', async (req, res) => {
 app.get('/allOrders', async (req, res) => {
     let allOrders = await OrdersModel.find({});
     res.json(allOrders);
+});
+
+app.get("/api/stock/:symbol/news-summary",async(req,res)=>{
+    const {symbol} = req.params;
+    try{
+        const summary = await getStockNewsSummary(symbol);
+        res.json({summary})
+    }
+    catch (err){
+        console.log(err);
+        res.status(500).json({error: "Failed to get news article"})
+    }
 });
 
 app.listen(PORT, () => {

@@ -23,7 +23,7 @@ useEffect(() => {
     
                              return (
                                  <tr key={index}>
-                                     <td>{item.name}</td>
+                                     <td> Sample Order Name</td>
                                      <td>{item.qty}</td>
                                      <td>{item.price}</td>
                                  </tr>

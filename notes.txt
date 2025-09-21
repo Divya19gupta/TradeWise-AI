@@ -1,0 +1,35 @@
+1) LangChain
+Think of LangChain like a recipe or workflow for AI.
+It decides the steps: what happens first, what happens next.
+
+Example in your Zerodha clone:
+Fetch latest news about a stock → Step 1
+Give the news to the AI model → Step 2
+AI summarizes → return to your app → Step 3
+
+So, LangChain is just organizing the flow of how AI should do its job.
+
+2) RAG (Retrieval-Augmented Generation) is used when the AI doesn’t already know something (or it’s not part of its training).
+Now imagine the AI model is super smart but forgetful. It doesn’t know today’s stock news unless you tell it.
+-- Retrieval → you fetch the data (e.g., news articles).
+-- Augment → you feed this data to the AI along with the question.
+-- Generation → AI uses that data to give a proper answer.
+
+You fetch that information from an external source (news, docs, PDFs, database, etc.).
+You feed it along with your prompt/task to the AI.
+The AI then uses that new info to give an answer.
+
+Example:
+- User clicks “Infosys”
+- You fetch 3 news articles about Infosys
+- Feed them to the AI → it outputs:
+“Infosys rose today due to strong US demand and a new AI partnership.”
+So RAG is how you make the AI “remember” or know external info it normally wouldn’t.
+
+Think of it like:
+AI = chef
+RAG = fresh ingredients
+Prompt = recipe
+LangChain = full workflow of making the dish
+
+So LangChain organizes the process, and RAG provides info the AI didn’t know.

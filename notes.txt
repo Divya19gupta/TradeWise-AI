@@ -33,3 +33,5 @@ Prompt = recipe
 LangChain = full workflow of making the dish
 
 So LangChain organizes the process, and RAG provides info the AI didn’t know.
+
+https://www.freecodecamp.org/news/how-to-secure-your-mern-stack-application/#heading-how-to-handle-the-signup-route

@@ -1,7 +1,7 @@
 # TradeWise AI
 #### (Trading website with AI News Summarizer)
 
-A full-stack Trading website enhanced with **AI-powered features** using **LangChain** and **RAG (Retrieval-Augmented Generation)**. Demonstrates practical full-stack skills combined with cutting-edge AI technologies.
+A full-stack Trading website inspired by Zerodha, enhanced with **AI-powered features** using **LangChain** and **RAG (Retrieval-Augmented Generation)**. Demonstrates practical full-stack skills combined with cutting-edge AI technologies.
 
 ---
 
